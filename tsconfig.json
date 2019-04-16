@@ -1,0 +1,36 @@
+// tsconfig for egg
+// egg-ts-helper/dist/utils.js > writeTsConfig > const tsconfigUrl = path_1.default.resolve(cwd, './tsconfig.json');
+// 会加载 `${process.cwd()}/tsconfig.json`
+// 以上是会改写、合并tsconfig
+// 最终加载、使用tsconfig 是在 ts-node
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "charset": "utf8",
+    "allowJs": false,
+    "pretty": true,
+    "noEmitOnError": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "strictPropertyInitialization": false,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "inlineSourceMap": true,
+    "importHelpers": true
+  },
+  "exclude": [
+    "app/public",
+    "app/views",
+    "node_modules*",
+    "client"
+  ]
+}

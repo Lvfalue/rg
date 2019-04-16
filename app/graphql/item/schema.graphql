@@ -1,0 +1,16 @@
+enum Priority {
+  HIGH,
+  NORMAL,
+  LOW,
+}
+
+type Item {
+  id: ID!
+  content: String!
+  expire: String
+  priority: Priority!
+  done: Boolean!
+  tags: [String!]
+  update_at: Date
+  create_at: Date
+}
